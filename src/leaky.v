@@ -22,14 +22,14 @@ module leaky (
         begin
             state <= next_state;
         end
-    
-        // next_state logic based on input current and degraded state
-        assign next_state = current + (state >> 1);
-
-        // spiking logic
-        assign spike = (state >= threshold);
 
     end
+    
+    // next_state logic based on input current and degraded state
+    assign next_state = current + (state >> 1);
+
+    // spiking logic
+    assign spike = (state >= threshold);
 
 endmodule
 
