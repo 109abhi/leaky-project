@@ -8,7 +8,8 @@ module leaky (
     output reg [7:0] state
 );
 
-    reg [7:0] next_state, threshold;
+    reg [7:0] threshold;
+    wire [7:0] next_state;
 
     always@(posedge clk)
     begin
