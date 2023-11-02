@@ -22,7 +22,7 @@ module leaky (
             state <= next_state;
         end
     
-        // next_state logic
+        // next_state logic based on input current and degraded state
         assign next_state = current + (state >> 1);
 
         // spiking logic
